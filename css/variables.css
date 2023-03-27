@@ -1,0 +1,22 @@
+/* Variables */
+:root{
+
+    /* Colors */
+    --hva-black: #000;
+    --hva-white: #fff;
+    --hva-blue: #0F00AF;
+    --hva-purple-dark: #8500E8;
+    --hva-purple-light: #9726EB;
+
+    --primary-color: var(--hva-purple-light);
+
+    --bg-color: var(--primary-color);
+
+    /* Fonts */
+    --font-family: 'Roboto', sans-serif;
+
+    /* Spacing */
+    --header-space: 4rem;
+    --max-width: 1200px;
+
+}

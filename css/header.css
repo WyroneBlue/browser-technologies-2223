@@ -1,0 +1,66 @@
+header{
+    position: sticky;
+    top: 0;
+    display: block;
+    inset-inline: 0;
+    max-width: var(--max-width);
+    padding: 20px;
+    z-index: 1;
+    background-color: var(--primary-color);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-inline: 20px;
+}
+
+header nav > *{
+    flex: 0 1 auto;
+}
+
+header nav > a {
+    display: grid;
+    place-content: center;
+    height: 30px;
+    width: 100px;
+    border-radius:10px;
+    background-color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header nav ul li{
+
+}
+
+
+header nav ul li a {
+    display: grid;
+    place-content: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body:has(main form section#user-info:target:focus-within) header nav ul li:nth-child(1) a,
+body:has(main form.no-js section#user-info:focus-within) header nav ul li:nth-child(1) a,
+body:has(main form section:nth-of-type(2):target:focus-within) header nav ul li:nth-child(2) a,
+body:has(main form.no-js section:nth-of-type(2):focus-within) header nav ul li:nth-child(2) a,
+body:has(main form section:nth-of-type(3):target:focus-within) header nav ul li:nth-child(3) a,
+body:has(main form.no-js section:nth-of-type(3):focus-within) header nav ul li:nth-child(3) a{
+    background-color: black;
+    color: white;
+}
