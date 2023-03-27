@@ -4,19 +4,185 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brwoser Technologies | Enquete</title>
+    <title>Browser Technologies | Enquete</title>
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
     <header>
-
+        <nav>
+            <a href="#user-info">Start</a>
+            <ul>
+                <li><a href="#user-info">1</a></li>
+                <li><a href="#wafs">2</a></li>
+                <li><a href="#css">3</a></li>
+            </ul>
+            <a href="#final">Results</a>
+        </nav>
     </header>
 
     <main>
 
+        <form action="/" class="no-js">
+
+            <section id="user-info">
+                <h2>User information</h2>
+                <p>Fill in your user info to start the enquete</p>
+                <label for="name">
+                    Name
+                    <input type="text" name="name" id="name" required>
+                </label>
+
+
+                <label for="email">
+                    Email
+                    <input type="email" name="email" id="email" required>
+                </label>
+
+                <label for="age">
+                    Age
+                    <input type="number" name="age" id="age" required max="120">
+                </label>
+
+                <button type="submit" data-step="wafs">
+                    Start Enquete
+                </button>
+
+            </section>
+
+            <section id="wafs">
+                <h2>Course: Web App From Scratch</h2>
+
+
+                <label for="wafs-teacher">
+                    Teacher
+                    <input type="text" name="wafs-teacher" id="wafs-teacher" required>
+                </label>
+
+                <label for="wafs-startdate">
+                    Startdate
+                    <input type="date" name="wafs-startdate" id="wafs-startdate" required>
+                </label>
+
+                <label for="wafs-enddate">
+                    Enddate
+                    <input type="date" name="wafs-enddate" id="wafs-enddate" required>
+                </label>
+
+                <label for="wafs-level">
+                    Course level
+
+                    <select name="wafs-level" id="wafs-level" required>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+
+                </label>
+
+                <fieldset>
+                    <legend>Rating</legend>
+
+                    <label for="wafs-rating-1">
+                        1
+                        <input type="radio" name="wafs-rating" id="wafs-rating-1" value="1">
+                    </label>
+
+                    <label for="wafs-rating-2">
+                        2
+                        <input type="radio" name="wafs-rating" id="wafs-rating-2" value="2">
+                    </label>
+
+                    <label for="wafs-rating-3">
+                        3
+                        <input type="radio" name="wafs-rating" id="wafs-rating-3" value="3">
+                    </label>
+
+                    <label for="wafs-rating-4">
+                        4
+                        <input type="radio" name="wafs-rating" id="wafs-rating-4" value="4">
+                    </label>
+
+                    <label for="wafs-rating-5">
+                        5
+                        <input type="radio" name="wafs-rating" id="wafs-rating-5" value="5">
+                    </label>
+                </fieldset>
+
+                <button type="submit" data-step="css">
+                    Next course
+                </button>
+            </section>
+
+            <section id="css">
+                <h2>Course: CSS To The Rescue</h2>
+
+
+                <label for="css-teacher">
+                    Teacher
+                    <input type="text" name="css-teacher" id="css-teacher" required>
+                </label>
+
+                <label for="css-startdate">
+                    Startdate
+                    <input type="date" name="css-startdate" id="css-startdate" required>
+                </label>
+
+                <label for="css-enddate">
+                    Enddate
+                    <input type="date" name="css-enddate" id="css-enddate" required>
+                </label>
+
+                <label for="css-level">
+                    Course level
+
+                    <select name="css-level" id="css-level" required>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+
+                </label>
+
+                <fieldset>
+                    <legend>Rating</legend>
+
+                    <label for="css-rating-1">
+                        1
+                        <input type="radio" name="css-rating" id="css-rating-1" value="1">
+                    </label>
+
+                    <label for="css-rating-2">
+                        2
+                        <input type="radio" name="css-rating" id="css-rating-2" value="2">
+                    </label>
+
+                    <label for="css-rating-3">
+                        3
+                        <input type="radio" name="css-rating" id="css-rating-3" value="3">
+                    </label>
+
+                    <label for="css-rating-4">
+                        4
+                        <input type="radio" name="css-rating" id="css-rating-4" value="4">
+                    </label>
+
+                    <label for="css-rating-5">
+                        5
+                        <input type="radio" name="css-rating" id="css-rating-5" value="5">
+                    </label>
+                </fieldset>
+
+                <button type="submit" data-step="final">
+                    Submit Enquete
+                </button>
+            </section>
+        </form>
     </main>
 
     <footer>
 
     </footer>
+
+    <!-- <script src="js/app.js" type="module"></script> -->
 </body>
 </html>
