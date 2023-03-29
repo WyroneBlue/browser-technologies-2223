@@ -89,15 +89,26 @@ form section label select{
 form section fieldset {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
     padding: 10px;
     margin-top: 20px;
     background-color: var(--hva-purple-dark);
     border-radius: 5px;
 }
 
+@media (max-width: 600px) {
+
+    form section fieldset {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+    }
+}
+
 form section fieldset legend {
     position: absolute;
     top: 0;
+    left: 0;
     margin-top: -20px;
     margin-left: -10px;
 }
@@ -106,13 +117,14 @@ form section fieldset input{
     position: absolute;
     inset: 0;
     appearance: none;
+    cursor: pointer;
 }
 
 form section fieldset label {
     display: grid;
     place-content: center;
     gap: 1rem;
-    width: 30px;
+    width: 100%;
     height: 30px;
     background-color: white;
     border-radius: 5px;
@@ -159,7 +171,8 @@ form section button{
     border-radius: 5px;
 }
 
-form.no-js section button {
+form.no-js section button,
+body:has(#final:target) form section button {
     display: none;
 }
 
