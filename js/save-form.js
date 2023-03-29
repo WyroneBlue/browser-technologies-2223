@@ -1,4 +1,6 @@
-const urlParams = new URLSearchParams(window.location.search);
+const url = new URL(window.location.href);
+const urlParams = new URLSearchParams(url.search);
+
 const getParam = (param) => {
     return urlParams.get(param);
 }
@@ -6,9 +8,17 @@ const getParam = (param) => {
 export default {
 
     init() {
+
+        this.getProgress();
+
         this.stepOne();
         this.stepTwo();
         this.stepThree();
+        this.stepFour();
+        this.stepFive();
+        this.stepSix();
+
+        localStorage.setItem('progress_fetched', 'false');
     },
 
     stepOne () {
@@ -29,17 +39,26 @@ export default {
         this.courseTemplate('css');
     },
 
+    stepFour() {
+        this.courseTemplate('pw-one');
+    },
+
+    stepFive() {
+        this.courseTemplate('pwa');
+    },
+
+    stepSix() {
+        this.courseTemplate('browser-tech');
+    },
+
     courseTemplate(course) {
         const data = {
             'teacher': getParam(`${course}-teacher`) || '',
             'startdate': getParam(`${course}-startdate`) || '',
-            'enddate': getParam(`${course}-enddate`) || '',
-            'rating': getParam(`${course}-rating`) || '',
             'level': getParam(`${course}-level`) || '',
             'explanation': getParam(`${course}-explanation`) || '',
             'insight': getParam(`${course}-insight`) || '',
         }
-
 
         let courseData = {}
         Object.keys(data).map(key => {
@@ -47,7 +66,13 @@ export default {
                 courseData[`${course}-${key}`] = data[key];
             }
         })
+
         console.log(courseData);
+
+        if(Object.keys(courseData).length === 0) {
+            console.log('no data');
+            return;
+        }
 
         this.getSavedValues(courseData, course);
     },
@@ -55,15 +80,19 @@ export default {
     getSavedValues(savedValues, course) {
 
         const stepOneInputs = document.querySelector(`#${course}`).querySelectorAll([`select`, `input`]);
-        console.log(stepOneInputs);
+
+        const ratings = [
+            'level',
+            'explanation',
+            'insight'
+        ]
+
         stepOneInputs.forEach(input => {
 
-            if(input.name.includes('rating')) {
-                console.log(input.value);
-                console.log(savedValues[input.name]);
+            const isRating = ratings.map(rating => input.name.includes(rating)).includes(true);
 
+            if (isRating) {
                 if(input.value == savedValues[input.name]){
-                    console.log('match');
                     input.checked = true;
                 }
             } else {
@@ -72,13 +101,26 @@ export default {
         });
     },
 
-    saveValues() {
-        const form = document.querySelector('form');
-        console.dir(form);
+    saveProgress() {
+        console.log('save progress');
 
-        // get input values
-        const inputs = form.querySelectorAll('input');
-        console.log(inputs);
+        const progress = url.href;
+        localStorage.setItem('url', progress);
+    },
 
+    getProgress() {
+        console.log('get progress');
+
+        const progress = localStorage.getItem('url');
+        const isStarted = url.search.length > 0;
+
+        const fetchedProgress = localStorage.getItem('fetched_progress');
+
+        if(progress && !isStarted && fetchedProgress) {
+            window.location.href = progress;
+        } else {
+            this.saveProgress();
+        }
+        localStorage.setItem('fetched_progress', true);
     }
 }
