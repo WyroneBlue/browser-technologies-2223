@@ -25,16 +25,48 @@ form.no-js section.hide-step {
 
 form section#user-info:target,
 form section:nth-of-type(2):target,
-form section:nth-of-type(3):target {
+form section:nth-of-type(3):target,
+form section:nth-of-type(4):target,
+form section:nth-of-type(5):target,
+form section:nth-of-type(6):target {
     display: flex;
 }
 
 form:not(.no-js):has(section#user-info:target) section:nth-of-type(2),
 form:not(.no-js):has(section#user-info:target) section:nth-of-type(3),
+form:not(.no-js):has(section#user-info:target) section:nth-of-type(4),
+form:not(.no-js):has(section#user-info:target) section:nth-of-type(5),
+form:not(.no-js):has(section#user-info:target) section:nth-of-type(6),
+
 form:not(.no-js):has(section:nth-of-type(2):target) section#user-info,
 form:not(.no-js):has(section:nth-of-type(2):target) section:nth-of-type(3),
+form:not(.no-js):has(section:nth-of-type(2):target) section:nth-of-type(4),
+form:not(.no-js):has(section:nth-of-type(2):target) section:nth-of-type(5),
+form:not(.no-js):has(section:nth-of-type(2):target) section:nth-of-type(6),
+
 form:not(.no-js):has(section:nth-of-type(3):target) section#user-info,
-form:not(.no-js):has(section:nth-of-type(3):target) section:nth-of-type(2) {
+form:not(.no-js):has(section:nth-of-type(3):target) section:nth-of-type(2),
+form:not(.no-js):has(section:nth-of-type(3):target) section:nth-of-type(4),
+form:not(.no-js):has(section:nth-of-type(3):target) section:nth-of-type(5),
+form:not(.no-js):has(section:nth-of-type(3):target) section:nth-of-type(6),
+
+form:not(.no-js):has(section:nth-of-type(4):target) section#user-info,
+form:not(.no-js):has(section:nth-of-type(4):target) section:nth-of-type(2),
+form:not(.no-js):has(section:nth-of-type(4):target) section:nth-of-type(3),
+form:not(.no-js):has(section:nth-of-type(4):target) section:nth-of-type(5),
+form:not(.no-js):has(section:nth-of-type(4):target) section:nth-of-type(6),
+
+form:not(.no-js):has(section:nth-of-type(5):target) section#user-info,
+form:not(.no-js):has(section:nth-of-type(5):target) section:nth-of-type(2),
+form:not(.no-js):has(section:nth-of-type(5):target) section:nth-of-type(3),
+form:not(.no-js):has(section:nth-of-type(5):target) section:nth-of-type(4),
+form:not(.no-js):has(section:nth-of-type(5):target) section:nth-of-type(6),
+
+form:not(.no-js):has(section:nth-of-type(6):target) section#user-info,
+form:not(.no-js):has(section:nth-of-type(6):target) section:nth-of-type(2),
+form:not(.no-js):has(section:nth-of-type(6):target) section:nth-of-type(3),
+form:not(.no-js):has(section:nth-of-type(6):target) section:nth-of-type(4),
+form:not(.no-js):has(section:nth-of-type(6):target) section:nth-of-type(5) {
     display: none;
 }
 
@@ -57,7 +89,7 @@ form section label select{
 form section fieldset {
     display: flex;
     justify-content: space-between;
-    padding: 10px .25rem;
+    padding: 10px;
     margin-top: 20px;
     background-color: var(--hva-purple-dark);
     border-radius: 5px;
@@ -67,6 +99,7 @@ form section fieldset legend {
     position: absolute;
     top: 0;
     margin-top: -20px;
+    margin-left: -10px;
 }
 
 form section fieldset input{
@@ -83,11 +116,42 @@ form section fieldset label {
     height: 30px;
     background-color: white;
     border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+form section fieldset label:hover {
+    background-color: rgba(0, 0, 0, .2);
+    color: white;
+    box-shadow: 0px 0px 10px white;
 }
 
 form section fieldset label:has(input:checked) {
     color: white;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 1);
+    border: 1px solid var(--hva-purple-dark);
+    box-shadow: 0 0 10px white;
+}
+
+form section fieldset label:has(input:checked)::before,
+form section fieldset label.selected::before {
+    content: "";
+    position: absolute;
+    inset-block: -5px;
+    width: 10px;
+    background-color: rgba(255, 255, 255, .5);
+    filter: blur(4px);
+
+    animation: skeleton 4s infinite ease-out;
+}
+
+@keyframes skeleton {
+    0% {
+        transform: translateX(-200%) scale(.8);
+    }
+    40%, 100% {
+        transform: translateX(40px);
+    }
 }
 
 form section button{
@@ -103,8 +167,6 @@ form.no-js section button[data-step="final"] {
     content: "Submit";
     display: block;
 }
-
-
 
 /*
 form:invalid button {

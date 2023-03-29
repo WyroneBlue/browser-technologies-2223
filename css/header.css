@@ -57,20 +57,64 @@ header nav ul li a {
 
 body:has(main form section#user-info:target):not(:has(main form section:focus-within)) header nav ul li:nth-child(1) a,
 body:has(main form section#user-info:focus-within) header nav ul li:nth-child(1) a,
+
 body:has(main form section:nth-of-type(2):target):not(:has(main form section:focus-within)) header nav ul li:nth-child(2) a,
 body:has(main form section:nth-of-type(2):focus-within) header nav ul li:nth-child(2) a,
+
 body:has(main form section:nth-of-type(3):target):not(:has(main form section:focus-within)) header nav ul li:nth-child(3) a,
-body:has(main form section:nth-of-type(3):focus-within) header nav ul li:nth-child(3) a{
-    background-color: black;
+body:has(main form section:nth-of-type(3):focus-within) header nav ul li:nth-child(3) a,
+
+body:has(main form section:nth-of-type(4):target):not(:has(main form section:focus-within)) header nav ul li:nth-child(4) a,
+body:has(main form section:nth-of-type(4):focus-within) header nav ul li:nth-child(4) a,
+
+body:has(main form section:nth-of-type(5):target):not(:has(main form section:focus-within)) header nav ul li:nth-child(5) a,
+body:has(main form section:nth-of-type(5):focus-within) header nav ul li:nth-child(5) a,
+
+body:has(main form section:nth-of-type(6):target):not(:has(main form section:focus-within)) header nav ul li:nth-child(6) a,
+body:has(main form section:nth-of-type(6):focus-within) header nav ul li:nth-child(6) a{
     color: white;
+    background-color: rgba(0, 0, 0, 1);
+    border: 1px solid var(--hva-purple-dark);
+    box-shadow: 0 0 10px white;
 }
 
 body:has(main form.no-js section#user-info:focus-within) header nav ul li:nth-child(2) a,
 body:has(main form.no-js section#user-info:focus-within) header nav ul li:nth-child(3) a,
+body:has(main form.no-js section#user-info:focus-within) header nav ul li:nth-child(4) a,
+body:has(main form.no-js section#user-info:focus-within) header nav ul li:nth-child(5) a,
+body:has(main form.no-js section#user-info:focus-within) header nav ul li:nth-child(6) a,
+
 body:has(main form.no-js section:nth-of-type(2):focus-within) header nav ul li:nth-child(1) a,
 body:has(main form.no-js section:nth-of-type(2):focus-within) header nav ul li:nth-child(3) a,
+body:has(main form.no-js section:nth-of-type(2):focus-within) header nav ul li:nth-child(4) a,
+body:has(main form.no-js section:nth-of-type(2):focus-within) header nav ul li:nth-child(5) a,
+body:has(main form.no-js section:nth-of-type(2):focus-within) header nav ul li:nth-child(6) a,
+
 body:has(main form.no-js section:nth-of-type(3):focus-within) header nav ul li:nth-child(1) a,
-body:has(main form.no-js section:nth-of-type(3):focus-within) header nav ul li:nth-child(2) a{
+body:has(main form.no-js section:nth-of-type(3):focus-within) header nav ul li:nth-child(2) a,
+body:has(main form.no-js section:nth-of-type(3):focus-within) header nav ul li:nth-child(4) a,
+body:has(main form.no-js section:nth-of-type(3):focus-within) header nav ul li:nth-child(5) a,
+body:has(main form.no-js section:nth-of-type(3):focus-within) header nav ul li:nth-child(6) a,
+
+body:has(main form.no-js section:nth-of-type(4):focus-within) header nav ul li:nth-child(1) a,
+body:has(main form.no-js section:nth-of-type(4):focus-within) header nav ul li:nth-child(2) a,
+body:has(main form.no-js section:nth-of-type(4):focus-within) header nav ul li:nth-child(3) a,
+body:has(main form.no-js section:nth-of-type(4):focus-within) header nav ul li:nth-child(5) a,
+body:has(main form.no-js section:nth-of-type(4):focus-within) header nav ul li:nth-child(6) a,
+
+
+body:has(main form.no-js section:nth-of-type(5):focus-within) header nav ul li:nth-child(1) a,
+body:has(main form.no-js section:nth-of-type(5):focus-within) header nav ul li:nth-child(2) a,
+body:has(main form.no-js section:nth-of-type(5):focus-within) header nav ul li:nth-child(3) a,
+body:has(main form.no-js section:nth-of-type(5):focus-within) header nav ul li:nth-child(4) a,
+body:has(main form.no-js section:nth-of-type(5):focus-within) header nav ul li:nth-child(6) a,
+
+body:has(main form.no-js section:nth-of-type(6):focus-within) header nav ul li:nth-child(1) a,
+body:has(main form.no-js section:nth-of-type(6):focus-within) header nav ul li:nth-child(2) a,
+body:has(main form.no-js section:nth-of-type(6):focus-within) header nav ul li:nth-child(3) a,
+body:has(main form.no-js section:nth-of-type(6):focus-within) header nav ul li:nth-child(4) a,
+body:has(main form.no-js section:nth-of-type(6):focus-within) header nav ul li:nth-child(5) a{
+
     background-color: white;
     color: black
 }
