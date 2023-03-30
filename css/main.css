@@ -108,7 +108,7 @@ form section fieldset {
 form section fieldset legend {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 10px;
     margin-top: -20px;
     margin-left: -10px;
 }
@@ -150,8 +150,8 @@ form section fieldset label.selected::before {
     content: "";
     position: absolute;
     inset-block: -5px;
-    width: 10px;
-    background-color: rgba(255, 255, 255, .5);
+    width: 100%;
+    border-right: 10px solid rgba(255, 255, 255, .5);
     filter: blur(4px);
 
     animation: skeleton 4s infinite ease-out;
@@ -159,10 +159,10 @@ form section fieldset label.selected::before {
 
 @keyframes skeleton {
     0% {
-        transform: translateX(-200%) scale(.8);
+        transform: translateX(-100%) scale(.8);
     }
     40%, 100% {
-        transform: translateX(40px);
+        transform: translateX(100%);
     }
 }
 
