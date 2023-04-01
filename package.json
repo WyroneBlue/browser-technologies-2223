@@ -1,0 +1,25 @@
+{
+  "name": "browser-technologies-2223",
+  "version": "1.0.0",
+  "description": "Enquete about the minor web development courses",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js --watch",
+    "sass": "node-sass --watch resources/sass/app.scss -o public/css --output-style compressed",
+    "dev-sass": "concurrently --kill-others \"npm run dev\" \"npm run sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-school:WyroneBlue/browser-technologies-2223.git"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.2",
+    "node-localstorage": "^2.2.1",
+    "node-sass": "^8.0.0"
+  },
+  "author": "Ymaro Blue",
+  "license": "ISC",
+  "type": "module"
+}
