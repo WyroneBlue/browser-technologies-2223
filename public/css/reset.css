@@ -1,0 +1,20 @@
+/* CSS reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    scroll-margin-top: 60px;
+}
+
+ul{
+    list-style: none;
+}
+
+button, label{
+    cursor: pointer;
+}
+
+fieldset{
+    border: none;
+}
