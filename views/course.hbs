@@ -1,0 +1,59 @@
+<form action="/course/{{ course.next }}">
+    <section id="{{ course.slug }}">
+        <h2>{{ course.name }}</h2>
+
+        <label for="{{ course.slug }}-teacher">
+            Teacher
+            <input type="text" name="{{ course.slug }}-teacher" id="{{ course.slug }}-teacher" value="{{ values.teacher }}" required>
+        </label>
+
+        <label for="{{ course.slug }}-startdate">
+            Startdate
+            <input type="date" name="{{ course.slug }}-startdate" id="{{ course.slug }}-startdate" value="{{ values.startdate }}" required>
+        </label>
+
+        <fieldset>
+            <legend>Course level</legend>
+
+            {{#loop 1 11 }}
+                <label for="{{ ../course.slug }}-level-{{ this }}">
+                    {{ this }}
+                    <input type="radio" name="{{ ../course.slug }}-level" id="{{ ../course.slug }}-level-{{ this }}" value="{{ this }}" {{#when this 'eq' ../values.level }} checked{{/when}} required>
+                </label>
+            {{/loop}}
+        </fieldset>
+
+        <fieldset>
+            <legend>Course explanation</legend>
+
+            {{#loop 1 11 }}
+
+                <label for="{{ ../course.slug }}-explanation-1">
+                    {{ this }}
+                    <input type="radio" name="{{ ../course.slug }}-explanation" id="{{ ../course.slug }}-explanation-{{ this }}" value="{{ this }}" {{#when this 'eq' ../values.explanation }} checked{{/when}} required>
+                </label>
+            {{/loop}}
+        </fieldset>
+
+        <fieldset>
+            <legend>Insights</legend>
+
+            {{#loop 1 11 }}
+
+                <label for="{{ ../course.slug }}-insight-1">
+                    {{ this }}
+                    <input type="radio" name="{{ ../course.slug }}-insight" id="{{ ../course.slug }}-insight-{{ this }}" value="{{ this }}" {{#when this 'eq' ../values.insight }} checked{{/when}} required>
+                </label>
+            {{/loop}}
+
+        </fieldset>
+
+        <input type="hidden" name="next" value="{{ course.next }}">
+        <input type="hidden" name="course" value="{{ course.slug }}">
+
+        <button type="submit" data-step="{{ course.next }}">
+            {{#when course.next 'noteq' 'final' }} Next course{{/when}}
+            {{#when course.next 'eq' 'final' }} Verify answers{{/when}}
+        </button>
+    </section>
+</form>

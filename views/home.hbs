@@ -1,0 +1,26 @@
+<form action="/" method="POST" class="no-js">
+
+    <section id="user-info">
+        <h2>User information</h2>
+        <p>Fill in your user info to start the enquete</p>
+
+        <label for="name">
+            Name
+            <input type="text" name="name" id="name" value="{{ values.name }}" required>
+        </label>
+
+        <label for="email">
+            Email
+            <input type="email" name="email" id="email" value="{{ values.email }}" required>
+        </label>
+
+        <label for="number">
+            Student number
+            <input type="number" name="number" id="number" value="{{ values.number }}" required pattern="[0-9]{7}">
+        </label>
+
+        <button type="submit">
+            Start Enquete
+        </button>
+    </section>
+</form>

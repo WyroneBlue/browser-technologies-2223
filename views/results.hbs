@@ -1,0 +1,59 @@
+<h1>Results</h1>
+<form action="/results/save" method="POST">
+    {{#each courses }}
+        <section id="{{ slug }}">
+            <h2>{{ name }}</h2>
+
+            <label for="{{ slug }}-teacher">
+                Teacher
+                <input type="text" name="{{ slug }}-teacher" id="{{ slug }}-teacher" value="{{ values.teacher }}" required>
+            </label>
+
+            <label for="{{ slug }}-startdate">
+                Startdate
+                <input type="date" name="{{ slug }}-startdate" id="{{ slug }}-startdate" value="{{ values.startdate }}" required>
+            </label>
+
+            <fieldset>
+                <legend>Course level</legend>
+
+                {{#loop 1 11 }}
+                    <label for="{{ ../slug }}-level-{{ this }}">
+                        {{ this }}
+                        <input type="radio" name="{{ ../slug }}-level" id="{{ ../slug }}-level-{{ this }}" value="{{ this }}" {{#when this 'eq' ../values.level }} checked{{/when}}>
+                    </label>
+                {{/loop}}
+            </fieldset>
+
+            <fieldset>
+                <legend>Course explanation</legend>
+
+                {{#loop 1 11 }}
+
+                    <label for="{{ ../slug }}-explanation-1">
+                        {{ this }}
+                        <input type="radio" name="{{ ../slug }}-explanation" id="{{ ../slug }}-explanation-{{ this }}" value="{{ this }}" {{#when this 'eq' ../values.explanation }} checked{{/when}}>
+                    </label>
+                {{/loop}}
+            </fieldset>
+
+            <fieldset>
+                <legend>Insights</legend>
+
+                {{#loop 1 11 }}
+
+                    <label for="{{ ../slug }}-insight-1">
+                        {{ this }}
+                        <input type="radio" name="{{ ../slug }}-insight" id="{{ ../slug }}-insight-{{ this }}" value="{{ this }}" {{#when this 'eq' ../values.insight }} checked{{/when}}>
+                    </label>
+                {{/loop}}
+
+            </fieldset>
+
+        </section>
+    {{/each}}
+
+    <button type="submit">
+        Submit enquete
+    </button>
+</form>
