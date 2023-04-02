@@ -1,0 +1,59 @@
+/* form label,
+fieldset{
+    overflow: hidden;
+} */
+
+form{
+    overflow: hidden;
+}
+
+fieldset {
+    position: static;
+}
+
+form label span,
+fieldset span{
+    position: absolute;
+    transition: transform 0.5s;
+    right: -3rem;
+    /* bottom: .6rem; */
+}
+
+form label span {
+    /* right: -3rem; */
+    bottom: .6rem;
+}
+
+fieldset span{
+    /* right: -5rem; */
+}
+
+form input[type="text"]:valid,
+form input[type="email"]:valid,
+form input[type="date"]:valid,
+form input[type="text"]:valid:focus,
+form input[type="email"]:valid:focus,
+form input[type="date"]:valid:focus,
+fieldset:has(input:checked){
+    border-bottom: 5px solid green;
+}
+
+fieldset:has(input:checked){
+    overflow: visible;
+    align-items: center;
+}
+
+
+form input[type="text"]:valid,
+form input[type="email"]:valid,
+form input[type="date"]:valid,
+fieldset:has(input:checked){
+    width: 90%;
+}
+
+form input[type="text"]:valid + span,
+form input[type="email"]:valid + span,
+form input[type="date"]:valid + span,
+fieldset:has(input:checked) span{
+    transform: translateX(-3rem);
+}
