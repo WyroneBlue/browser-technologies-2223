@@ -7,12 +7,10 @@ const localStorage = new LocalStorage('./storage');
 //Setting localStorage Item
 export const getLocalStorage = (key) => {
     if(!localStorage){
-        console.log('no localstorage')
         return false;
     }
-    console.log('str1',localStorage.getItem(key));
+
     if(!localStorage.getItem(key)){
-        console.log('no key found')
         return false;
     }
 

@@ -7,9 +7,10 @@ export const index = async(req, res) => {
         title: "Home"
     };
 
-    const storage = getLocalStorage('userInfo');
+    // const storage = getLocalStorage('userInfo');
+    const storage = JSON.parse(getLocalStorage('userInfo')) || '';
     let values = {};
-    if(storage){
+    if(storage !== ''){
         values = JSON.parse(storage);
     }
 
@@ -60,7 +61,6 @@ export const course = (req, res) => {
     };
 
     const storage = JSON.parse(getLocalStorage(slug)) || {};
-    console.log('storage', storage);
 
     res.status(200).render('course', {
         page,
