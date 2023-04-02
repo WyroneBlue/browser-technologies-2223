@@ -1,0 +1,12 @@
+<fieldset>
+    <legend>{{ name }}</legend>
+
+    {{#loop 1 count }}
+        <label for="{{ ../slug }}-{{ ../field }}-{{ this }}">
+            {{ this }}
+            <input type="radio" name="{{ ../slug }}-{{ ../field }}" id="{{ ../slug }}-{{ ../field }}-{{ this }}" value="{{ this }}" {{#when this 'eq' ../value }} checked{{/when}} required>
+        </label>
+    {{/loop}}
+
+    <span>✅</span>
+</fieldset>
