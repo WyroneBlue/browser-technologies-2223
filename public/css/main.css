@@ -6,6 +6,10 @@ main{
     padding: 20px;
 }
 
+main h1 {
+    margin-left: 20px;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -185,12 +189,6 @@ form section fieldset label.selected::before {
 form button{
     padding: .25rem;
     border-radius: 5px;
-}
-
-form[action="/results/save"]:valid button {
-    position: sticky;
-    bottom: 10px;
-    inset-inline: 40px;
 }
 
 form.no-js section button[data-step="final"] {
