@@ -43,7 +43,6 @@ fieldset:has(input:checked){
     align-items: center;
 }
 
-
 form input[type="text"]:valid,
 form input[type="email"]:valid,
 form input[type="date"]:valid,
@@ -56,4 +55,14 @@ form input[type="email"]:valid + span,
 form input[type="date"]:valid + span,
 fieldset:has(input:checked) span{
     transform: translateX(-3rem);
+}
+
+form[action="/results/save"]{
+    position: relative;
+}
+
+form[action="/results/save"]:valid button {
+    position: sticky;
+    bottom: 10px;
+    inset-inline: 40px;
 }

@@ -7,7 +7,18 @@ main{
 }
 
 main h1 {
+    position: relative;
     margin-left: 20px;
+}
+
+main h1::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30px;
+    height: 4px;
+    background-color: var(--hva-purple-dark);
 }
 
 form{
