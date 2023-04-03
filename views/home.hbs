@@ -4,13 +4,14 @@
         <h2>User information</h2>
         <p>Fill in your user info to start the enquete</p>
 
-
-        {{> input field="name" name="Name" value=values.name type="text"}}
+        {{> input field="name" name="Name" value=values.name type="text" minlength="2"}}
         {{> input field="email" name="Email" value=values.email type="email"}}
-        {{> input field="number" name="Student number" value=values.number type="text" pattern="[0-9]{7}" maxlength="7"}}
+        {{> input field="number" name="Student number" value=values.number type="text" pattern="[0-9]{7}" maxlength="7" inputmode="numeric"}}
 
         <button type="submit">
             Start Enquete
         </button>
     </section>
 </form>
+
+<script src="/js/home.js" type="module"></script>

@@ -10,10 +10,13 @@
             id="{{ slug }}-{{ field }}"
             value="{{ value }}"
             {{#if pattern}} pattern="{{ pattern}}" {{/if}}
+            {{#if minlength}} minlength="{{ minlength}}" {{/if}}
             {{#if maxlength}} maxlength="{{ maxlength}}" {{/if}}
+            {{#if inputmode}} inputmode="{{ inputmode}}" {{/if}}
             required
         />
         <span>✅</span>
+        <p>Error</p>
     </label>
 {{else}}
     <label for="{{ field }}">
@@ -25,9 +28,12 @@
             id="{{ field }}"
             value="{{ value }}"
             {{#if pattern}} pattern="{{ pattern}}" {{/if}}
+            {{#if minlength}} minlength="{{ minlength}}" {{/if}}
             {{#if maxlength}} maxlength="{{ maxlength}}" {{/if}}
+            {{#if inputmode}} inputmode="{{ inputmode}}" {{/if}}
             required
         />
         <span>✅</span>
+        <p>Error</p>
     </label>
 {{/if}}
