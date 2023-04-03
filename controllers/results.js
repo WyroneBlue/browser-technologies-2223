@@ -18,6 +18,7 @@ export const index = async(req, res) => {
         page,
         index: 'results',
         courses: courseValues,
+        userInfo: JSON.parse(getLocalStorage('userInfo'))
     });
 }
 
