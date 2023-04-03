@@ -11,7 +11,7 @@ export const index = async(req, res) => {
     const storage = JSON.parse(getLocalStorage('userInfo')) || '';
     let values = {};
     if(storage !== ''){
-        values = JSON.parse(storage);
+        values = storage;
     }
 
     res.status(200).render('home', {
