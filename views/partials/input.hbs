@@ -4,14 +4,30 @@
     <label for="{{ slug }}-{{ field }}">
         {{ name }}
 
-        <input type="{{ type }}" name="{{ slug }}-{{ field }}" id="{{ slug }}-{{ field }}" value="{{ value }}"  {{#if pattern}} pattern="{{ pattern}}" {{/if}}required>
+        <input
+            type="{{ type }}"
+            name="{{ slug }}-{{ field }}"
+            id="{{ slug }}-{{ field }}"
+            value="{{ value }}"
+            {{#if pattern}} pattern="{{ pattern}}" {{/if}}
+            {{#if maxlength}} maxlength="{{ maxlength}}" {{/if}}
+            required
+        />
         <span>✅</span>
     </label>
 {{else}}
     <label for="{{ field }}">
         {{ name }}
 
-        <input type="{{ type }}" name="{{ field }}" id="{{ field }}" value="{{ value }}"  {{#if pattern}} pattern="{{ pattern}}" {{/if}}required>
+        <input
+            type="{{ type }}"
+            name="{{ field }}"
+            id="{{ field }}"
+            value="{{ value }}"
+            {{#if pattern}} pattern="{{ pattern}}" {{/if}}
+            {{#if maxlength}} maxlength="{{ maxlength}}" {{/if}}
+            required
+        />
         <span>✅</span>
     </label>
 {{/if}}

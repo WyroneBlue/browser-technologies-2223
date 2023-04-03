@@ -1,5 +1,11 @@
 <h1>Results</h1>
 <form action="/results/save" method="POST">
+    <section id="user-info">
+        <h2>User information</h2>
+        {{> input field="name" name="Name" value=userInfo.name type="text"}}
+        {{> input field="email" name="Email" value=userInfo.email type="email"}}
+        {{> input field="number" name="Student number" value=userInfo.number type="text" pattern="[0-9]{7}" maxlength="7"}}
+    </section>
     {{#each courses }}
         <section id="{{ slug }}">
             <h2>{{ name }}</h2>
