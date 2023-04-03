@@ -11,11 +11,42 @@ fieldset {
     position: static;
 }
 
+
+form label p,
+fieldset p{
+    height: 0;
+    opacity: 0;
+    transition: height 0.5s;
+}
+
+form label p{
+    margin-top: 5px;
+}
+
+fieldset p{
+    position: absolute;
+    margin-top: 87px;
+    left: 0;
+}
+
+@media (min-width: 600px) {
+    fieldset p{
+        margin-top: 44px;
+    }
+}
+
+p.show-error{
+    height: auto;
+    color: rgba(255, 0, 0, 0.8);
+    opacity: 1;
+}
+
 form label span,
 fieldset span{
     position: absolute;
     transition: transform 0.5s;
     right: -3rem;
+    opacity: 0;
     /* bottom: .6rem; */
 }
 
@@ -38,6 +69,10 @@ fieldset:has(input:checked){
     border-bottom: 5px solid green;
 }
 
+form label:has(p.show-error) input {
+    border: 2px solid red;
+}
+
 fieldset:has(input:checked){
     overflow: visible;
     align-items: center;
@@ -55,6 +90,7 @@ form input[type="email"]:valid + span,
 form input[type="date"]:valid + span,
 fieldset:has(input:checked) span{
     transform: translateX(-3rem);
+    opacity: 1;
 }
 
 form[action="/results/save"]{
