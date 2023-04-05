@@ -164,6 +164,7 @@ form section fieldset label {
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
+    border: 2px solid transparent;
 }
 
 form section fieldset label:hover {
@@ -177,6 +178,29 @@ form section fieldset label:has(input:checked) {
     background-color: rgba(0, 0, 0, 1);
     border: 1px solid var(--hva-purple-dark);
     box-shadow: 0 0 10px white;
+}
+
+form section fieldset label:has(input[type=radio]:focus){
+    background-color: var(--hva-purple-light);
+    color: white;
+    border: 2px solid black;
+    box-shadow: 0 0 10px white;
+}
+
+form section fieldset:has(input[type=radio]:indeterminate:focus) {
+    position: relative;
+}
+
+form section fieldset:has(input[type=radio]:indeterminate:focus)::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -5px;
+    height: 20px;
+    width: 20px;
+    background-color: var(--hva-blue);
+    border-radius: 50%;
+    z-index: 1;
 }
 
 form section fieldset label:has(input:checked)::before,
