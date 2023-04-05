@@ -6,5 +6,3 @@ export const courses = [
     { name: 'Browser technologies', slug: 'bws-tech', next: 'final' },
 ];
 
-export const queryString = (req) => req._parsedUrl.search;
-

@@ -1,5 +1,5 @@
 import { getLocalStorage, setLocalStorage } from '../helpers/Localstorage.js';
-import { courses, queryString }  from './courses.js';
+import { courses }  from './courses.js';
 
 export const index = async(req, res) => {
 
@@ -18,7 +18,6 @@ export const index = async(req, res) => {
         page,
         courseStart: courses[0].slug,
         index: 'start',
-        query: queryString(req),
         values
     });
 };
@@ -67,7 +66,6 @@ export const course = (req, res) => {
         course,
         values: storage,
         index,
-        query: queryString(req)
     });
 };
 
@@ -78,6 +76,7 @@ export const thanks = (req, res) => {
     };
 
     res.status(200).render('thanks', {
+        layout: 'thanks',
         page
     });
 };
