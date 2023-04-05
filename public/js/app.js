@@ -9,10 +9,7 @@ const displayError = (text, message) => {
 }
 
 export const showTextError = (input, message) => {
-    console.log(input);
-    console.log(!input.value);
     if (!input.value || !input.checkValidity()) {
-        console.log('no input');
         const text = input.parentNode.querySelector('p');
         displayError(text, message);
 

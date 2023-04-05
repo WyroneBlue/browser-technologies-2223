@@ -1,5 +1,3 @@
-console.log('Home');
-
 import { showTextError } from './app.js';
 
 const form = document.querySelector('form');

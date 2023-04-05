@@ -12,6 +12,7 @@ const interval = setInterval(() => {
     counter--;
     updateCount(counter);
 
+    console.log(counter);
     if (counter === 0) {
         redirect();
         clearInterval(interval);
@@ -23,6 +24,5 @@ function updateCount(count) {
 }
 
 function redirect() {
-    console.log('redirecting...');
-    // window.location.href = '/';
+    window.location.href = '/';
 }

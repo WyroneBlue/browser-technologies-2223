@@ -1,5 +1,3 @@
-console.log('Course');
-
 const form = document.querySelector('form');
 const submitButton = document.querySelector('button[type="submit"]');
 const inputs = document.querySelectorAll('input');
@@ -11,16 +9,12 @@ const errors = {
 }
 
 const displayError = (text, message) => {
-    console.log(text);
     text.classList.add('show-error');
     text.textContent = message;
 }
 
 const showTextError = (input, message) => {
-    console.log(input);
-    console.log(!input.value);
     if (!input.value) {
-        console.log('no input');
         const text = input.parentNode.querySelector('p');
         displayError(text, message);
 
@@ -31,13 +25,10 @@ const showTextError = (input, message) => {
 }
 
 const showRadioError = (input, message) => {
-    console.log(input);
     const parent = input.parentNode.parentNode;
     const checkedItems = parent.querySelectorAll('input:checked');
-    console.log(checkedItems.length);
 
     if (checkedItems.length < 1) {
-        console.log('no input');
         const text = parent.querySelector('p');
         displayError(text, message);
         return false;
@@ -89,7 +80,6 @@ inputs.forEach(input => {
         let text;
         const target = e.target;
         const parent = target.parentNode;
-        console.log(parent);
 
         if (target.type === 'text' || target.type === 'date' || target.type === 'email') {
             text = parent.querySelector('p');
