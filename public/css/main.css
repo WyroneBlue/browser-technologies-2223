@@ -11,7 +11,10 @@ main h1 {
     margin-left: 20px;
 }
 
-main h1::before{
+main h1::before,
+main h2::before,
+main h3::before{
+
     content: "";
     position: absolute;
     bottom: -5px;
@@ -215,3 +218,37 @@ form.no-js section button[data-step="final"] {
     content: "Submit";
     display: block;
 }
+
+
+body#thanks h1 {
+    font-size: 1.5rem;
+}
+
+body#thanks main > section {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+}
+
+body#thanks main > section section{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 20px;
+    max-width: 500px;
+}
+
+body#thanks a {
+
+}
+
+body#thanks.no-js p:last-of-type,
+body#thanks a {
+    display: none;
+}
+
+body#thanks.no-js a {
+    display: block;
+}
+

@@ -15,7 +15,7 @@ header nav {
     gap: 20px;
     max-width: var(--max-width);
     margin-inline: auto;
-    padding-inline: 40px;
+    padding-inline: 20px;
 }
 
 header nav > *{
@@ -131,4 +131,9 @@ body:has(main form.no-js section:nth-of-type(6):focus-within) header nav ul li:n
 
     background-color: white;
     color: black
+}
+
+body#thanks header {
+    height: 40px;
+    background-color: var(--hva-purple-dark);
 }
