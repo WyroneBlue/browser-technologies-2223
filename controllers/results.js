@@ -1,5 +1,5 @@
 import { courses } from './courses.js';
-import { getLocalStorage, clearLocalStorage } from '../helpers/localstorage.js';
+import { getLocalStorage, clearLocalStorage } from '../helpers/Localstorage.js';
 
 export const index = async(req, res) => {
 
