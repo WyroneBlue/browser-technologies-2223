@@ -1,6 +1,8 @@
 console.log('Wagwan World');
 
 const form = document.querySelector('form');
+const css = document.querySelector("link[href='/css/app.css']");
+const cssLoaded = () => Boolean(css.sheet);
 
 const displayError = (text, message) => {
     console.log(text);
@@ -19,17 +21,13 @@ export const showTextError = (input, message) => {
     }
 }
 
-const showRadioError = (input, message) => {
-    const parent = input.parentNode.parentNode;
-    const checkedItems = parent.querySelectorAll('input:checked');
+export const addChecksToForm = () => {
 
-    if (checkedItems.length < 1) {
-        console.log('no input');
-        const text = parent.querySelector('p');
-        displayError(text, message);
-        return false;
-    } else {
-        return true;
+    if (cssLoaded()){
+        const spans = document.querySelectorAll('span');
+        spans.forEach(span => {
+            span.textContent = '✅';
+        });
     }
 }
 

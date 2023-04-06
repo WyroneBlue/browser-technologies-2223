@@ -1,4 +1,4 @@
-import { showTextError } from './app.js';
+import { showTextError, addChecksToForm } from './app.js';
 
 const form = document.querySelector('form');
 const submitButton = document.querySelector('button[type="submit"]');
@@ -34,6 +34,8 @@ submitButton.addEventListener('click', async (e) => {
         form.submit();
     }
 });
+
+window.addEventListener('DOMContentLoaded', addChecksToForm);
 
 inputs.forEach(input => {
     input.addEventListener('input', (e) => {
