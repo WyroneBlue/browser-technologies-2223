@@ -3,7 +3,6 @@ const msg = document.querySelector('span');
 const body = document.querySelector('body');
 
 window.addEventListener('DOMContentLoaded', () => {
-
     body.classList.remove('no-js');
     msg.textContent = counter;
 });
@@ -12,7 +11,6 @@ const interval = setInterval(() => {
     counter--;
     updateCount(counter);
 
-    console.log(counter);
     if (counter === 0) {
         redirect();
         clearInterval(interval);
