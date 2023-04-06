@@ -12,13 +12,69 @@
 
     --primary-color: var(--hva-purple-light);
 
-    --bg-color: var(--primary-color);
+    --bg-color: var(--hva-white);
 
     /* Fonts */
     --font-family: 'Roboto', sans-serif;
+    --font-weight: 400;
 
     /* Spacing */
     --header-space: 4rem;
     --max-width: 1200px;
 
+    /* Text */
+    --text-color: var(--hva-black);
+
+    /* Input */
+    --input-bg: var(--hva-white);
+    --check-bg: transparent;
+    --label-bg: var(--hva-white);
+    --radio-indicator: var(--hva-blue);
+    --radio-active: rgba(0, 0, 0, .1);
+    --radio-hover: rgba(0, 0, 0, .2);
+    --radio-focus: var(--hva-purple-light);
+    --radio-focus-text: var(--hva-white);
+    --radio-skeleton: rgba(255, 255, 255, .5);
+    --radio-text: var(--hva-black);
+
+    /* Buttons */
+    --button-bg: var(--hva-purple-light);
+
+    /* Error */
+    --error-color: rgba(255, 0, 0, 0.8);
+    --error-bg: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+
+        /* Colors */
+        --hva-white: rgba(255, 255, 255, 0.9);
+        --bg-color: var(--hva-blue);
+        --primary-color: var(--hva-black);
+
+        /* Text */
+        --text-color: var(--hva-white);
+        --font-weight: 700;
+
+        /* Input */
+        --input-bg: rgba(255, 255, 255, 0.5);
+        --check-bg: var(--hva-white);
+        --label-bg: var(--hva-purple-dark);
+        --radio-indicator: var(--hva-white);
+        --radio-active: rgba(255, 255, 255, .1);
+        --radio-hover: rgba(255, 255, 255, .2);
+        --radio-focus: var(--hva-white);
+        --radio-focus-text: var(--hva-black);
+        --radio-skeleton: rgba(0, 0, 0, .5);
+        --radio-text: var(--hva-white);
+
+        /* Buttons */
+        --button-bg: var(--hva-black);
+
+        /* Error */
+        --error-color: transparent;
+        --error-bg: rgba(255, 0, 0, 0.8);
+
+    }
 }
