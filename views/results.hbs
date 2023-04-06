@@ -13,9 +13,9 @@
             {{> input slug=slug field="teacher" name="Teacher" value=values.teacher type="text"}}
             {{> input slug=slug field="startdate" name="Startdate" value=values.startdate type="date"}}
 
-            {{> radio name="Course level" slug=slug field="level" count=11 value=values.level}}
-            {{> radio name="Course explanation" slug=slug field="explanation" count=11 value=values.explanation}}
-            {{> radio name="Insights" slug=slug field="insight" count=11 value=values.insight}}
+            {{> radio name="Course difficulty" slug=slug field="level" count=11 value=values.level}}
+            {{> radio name="Course explanations by teacher" slug=slug field="explanation" count=11 value=values.explanation}}
+            {{> radio name="New Insights from the course" slug=slug field="insight" count=11 value=values.insight}}
 
         </section>
     {{/each}}

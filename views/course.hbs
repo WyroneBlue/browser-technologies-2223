@@ -5,9 +5,9 @@
         {{> input slug=course.slug field="teacher" name="Teacher" value=values.teacher type="text"}}
         {{> input slug=course.slug field="startdate" name="Startdate" value=values.startdate type="date"}}
 
-        {{> radio name="Course level" slug=course.slug field="level" count=11 value=values.level}}
-        {{> radio name="Course explanation" slug=course.slug field="explanation" count=11 value=values.explanation}}
-        {{> radio name="Insights" slug=course.slug field="insight" count=11 value=values.insight}}
+        {{> radio name="Course difficulty" slug=course.slug field="level" count=11 value=values.level}}
+        {{> radio name="Course explanations by teacher" slug=course.slug field="explanation" count=11 value=values.explanation}}
+        {{> radio name="New Insights from the course" slug=course.slug field="insight" count=11 value=values.insight}}
 
         <input type="hidden" name="next" value="{{ course.next }}">
         <input type="hidden" name="course" value="{{ course.slug }}">
