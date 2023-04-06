@@ -72,7 +72,7 @@ form input[type="text"]:valid:focus,
 form input[type="email"]:valid:focus,
 form input[type="date"]:valid:focus,
 fieldset:has(input:checked){
-    border-bottom: 5px solid green;
+    border-bottom: 5px solid var(--input-valid);
 }
 
 form label:has(p.show-error) input {
@@ -84,16 +84,16 @@ fieldset:has(input:checked){
     align-items: center;
 }
 
-form input[type="text"]:valid,
-form input[type="email"]:valid,
-form input[type="date"]:valid,
-fieldset:has(input:checked){
+form:not(.no-js) input[type="text"]:valid,
+form:not(.no-js) input[type="email"]:valid,
+form:not(.no-js) input[type="date"]:valid,
+form:not(.no-js) fieldset:has(input:checked){
     width: 90%;
 }
 
-form input[type="text"]:valid + span,
-form input[type="email"]:valid + span,
-form input[type="date"]:valid + span,
+form:not(.no-js) input[type="text"]:valid + span,
+form:not(.no-js) input[type="email"]:valid + span,
+form:not(.no-js) input[type="date"]:valid + span,
 fieldset:has(input:checked) span{
     transform: translateX(-3rem);
     opacity: 1;

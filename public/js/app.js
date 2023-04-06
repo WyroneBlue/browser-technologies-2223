@@ -1,8 +1,8 @@
 console.log('Wagwan World');
 
 const form = document.querySelector('form');
-const css = document.querySelector("link[href='/css/app.css']");
-const cssLoaded = () => Boolean(css.sheet);
+const styles = document.querySelector("link[href='/css/app.css']");
+const cssLoaded = () => Boolean(styles.sheet);
 
 const displayError = (text, message) => {
     console.log(text);

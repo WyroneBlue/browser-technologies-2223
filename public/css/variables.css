@@ -27,6 +27,7 @@
 
     /* Input */
     --input-bg: var(--hva-white);
+    --input-valid: green;
     --check-bg: transparent;
     --label-bg: var(--hva-white);
     --radio-indicator: var(--hva-blue);
@@ -59,6 +60,7 @@
 
         /* Input */
         --input-bg: rgba(255, 255, 255, 0.5);
+        --input-valid: lime;
         --check-bg: var(--hva-white);
         --label-bg: var(--hva-purple-dark);
         --radio-indicator: var(--hva-white);
