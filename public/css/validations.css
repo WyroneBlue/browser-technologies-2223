@@ -56,6 +56,11 @@ fieldset span{
     background-color: var(--check-bg);
 }
 
+form.no-js label span,
+form.no-js fieldset span{
+    display: none;
+}
+
 form label span {
     bottom: .6rem;
 }

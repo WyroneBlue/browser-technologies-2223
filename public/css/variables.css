@@ -73,7 +73,7 @@
         --button-bg: var(--hva-black);
 
         /* Error */
-        --error-color: transparent;
+        --error-color: var(--text-color);
         --error-bg: rgba(255, 0, 0, 0.8);
 
     }

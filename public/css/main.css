@@ -130,9 +130,12 @@ form section fieldset {
     gap: 1rem;
     padding: 10px;
     margin-top: 20px;
-    /* background-color: var(--hva-purple-dark); */
     background-color: var(--primary-color);
     border-radius: 5px;
+}
+
+form section fieldset:has(p.show-error) {
+    margin: 20px 0;
 }
 
 @media (max-width: 600px) {
