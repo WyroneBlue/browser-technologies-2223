@@ -3,7 +3,7 @@
 @import 'header.css';
 @import 'main.css';
 @import 'validations.css';
-@import 'footer.css';
+@import 'fallback.css';
 
 body{
     overflow-x: hidden;

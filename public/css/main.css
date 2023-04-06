@@ -148,9 +148,7 @@ form section fieldset:has(p.show-error) {
 }
 
 form section fieldset legend {
-    /* position: absolute; */
     top: -10px;
-    /* left: 10px; */
     left: 0;
     margin-top: -20px;
     margin-left: -10px;
@@ -239,12 +237,6 @@ form button{
     background-color: rgba(0, 0, 0, .7);
     color: rgba(255, 255, 255, .9);
     font-weight: 700;
-}
-
-@supports (background-image: linear-gradient(var(--hva-white), var(--primary-color), var(--button-bg), rgba(0, 0, 0, .9))){
-    form button {
-        background-image: linear-gradient(var(--hva-white), var(--primary-color), var(--button-bg), rgba(0, 0, 0, .9));
-    }
 }
 
 form.no-js section button[data-step="final"] {

@@ -1,0 +1,31 @@
+@supports (background-image: linear-gradient(var(--hva-white), var(--primary-color), var(--button-bg), rgba(0, 0, 0, .9))){
+    form button {
+        background-image: linear-gradient(var(--hva-white), var(--primary-color), var(--button-bg), rgba(0, 0, 0, .9));
+    }
+}
+
+@supports not (display: grid) {
+    body#thanks main > section,
+    form section fieldset label,
+    form section fieldset {
+        display: inline-block;
+    }
+
+    body#thanks main > section > *,
+    form section fieldset label > *,
+    form section fieldset > * {
+        margin: 20px .5rem 0;
+    }
+
+    body#thanks main > section:first-of-type > *,
+    form section fieldset label:first-of-type > *,
+    form section fieldset:first-of-type > * {
+        margin-left: 0;
+    }
+
+    body#thanks main > section:last-of-type > *,
+    form section fieldset label:last-of-type > *,
+    form section fieldset:last-of-type > * {
+        margin-right: 0;
+    }
+}
